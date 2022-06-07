@@ -1,0 +1,11 @@
+Jenis-jenis Tipe Data
+
+-Number
+ * 10, -1500, 3.14
+-String
+ * "Hello World!", 'Hello World!'
+-Boolean
+-Object
+-Function
+-Undefined
+-Array
