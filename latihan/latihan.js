@@ -1,0 +1,1 @@
+var angka = prompt("Masukkan Angka");
