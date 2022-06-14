@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Variabel Scope</title>
+</head>
+<body>
+
+Variabel scope adalah ruang lingkup variabel
+ada dua jenis yaitu: block scope & function scope
+nah javascript menganut "function scope";
+apa bedanya dengan block scope? tidak bisa mengakses variabel luar(
+cth:
+let a = 2;
+if(a % 2 == 0){
+	let genap == true;
+}
+
+if(genap){
+	alert("iya genap");
+}
+
+code diatas jika pada block scope tidak akan berjalan karena variabel genap berada di dalam if tidak bisa diakses oleh if selanjutnya
+)
+namun jika function scope, ia kemungkinan bisa
+
+// variabel global / variabel window
+cth: let a = 1;
+bisa akses dengan (a / window.a);
+
+<script>
+	// let a = 1;
+
+	// function tambah(){
+	// 	let a = 5;
+	// 	return a;
+	// } // hasil: 5
+
+// function tambah(){
+// 	a = 3;
+// 	return a;
+// } // hasil: 3 / jika tidak ada deklarasi variabel makan secara otomatis akan dibuatkan variabel diluar function (global scope) dengan nama variabel yang sama yang ada pada function;
+
+// let a = 2;
+
+// function tambah(a){
+// 	return a;
+// }
+// 	console.log(tambah(a)); // hasilnya yaitu: 2;
+
+
+// let a = 5;
+
+// function tambah(){
+// 	return a;
+// }
+// 	console.log(tambah()); // hasilnya yaitu: 5;
+</script>
+</body>
+</html>

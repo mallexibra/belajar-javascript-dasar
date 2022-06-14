@@ -30,7 +30,7 @@ function tambah(a, b){
 	for(i = 0; i < arguments.length; i++){
 		coba += arguments[i];
 	}
-
+	
 	coba += a + b;
 
 	return coba;
