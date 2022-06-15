@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rekursif Function: JS</title>
+</head>
+<body>
+
+Rekursif: Fungsi yang memanggil dirinya sendiri -> looping;
+Base Case: Untuk memberhentikan looping;
+
+<script>
+
+	// function angka(n){
+
+	// 	if(n === 0){
+	// 		return 5;
+	// 	} // Base Case
+	// 	console.log(n);
+
+	// 	return angka(n-1);
+	// } // Rekursif
+
+	// angka(5);
+
+// function angka(n){
+// 	console.log(n);
+
+// 	return n * (angka(n-1));
+// }
+
+// angka(5);
+
+function sum(n){
+	if (n === 0){
+		return 0;
+	}
+
+	return n + sum(n-1);
+}
+
+sum(4);
+
+console.log(sum());
+
+</script>
+</body>
+</html>
