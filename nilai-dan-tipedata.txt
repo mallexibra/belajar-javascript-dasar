@@ -2,10 +2,36 @@ Jenis-jenis Tipe Data
 
 -Number
  * 10, -1500, 3.14
+ * Jika dituliskan setelah variabel (x++), statement akan menghasilkan nilai variabel sebelum ditingkatkan nilainya.
+ * Jika dituliskan sebelum variabel (++x), statement akan menghasilkan nilai variabel setelah ditingkatkan nilainya.
 -String
  * "Hello World!", 'Hello World!'
 -Boolean
--Object
 -Function
--Undefined
--Array
+-Undefined: nilai yang terbentuk ketika variabel tidak memiliki nilai
+-Null
+ * Nilai yang perlu diinisialisasikan pada variabel, namun sebenarnya nilainya tidak ada // biasanya digunakan sebagai nilai sementara // alternatif dari nilai undifined.
+-Array: Tipe data yang dapat mengelompokkan lebih dari satu nilai dari tipe data lain;
+ * Akses ke index terntentu namaVar[index]; // index dimulai dari 0;
+-Object: Tipe data yang hampir sama dengan array, namun bedanya yaitu diakses bukan melalui index namun key-value;
+ * Bahkan bisa menambahkan array ke dalam objek
+  ~ {firstName: Malik, name: ["Malik", 43, true]};
+ * Penulisan: {key: value, key1: value, key2: value};
+ * Baris baru tidak akan dihiraukan oleh object, dan ini penulisan yang lebih disarankan karena akan memudahkan kita dalam memahami data yang dituliskan atau yang ada;
+  ~ let user = {
+    firstName: "Harry",
+    lastName: "Potter", 
+    age: 20, 
+    isMuggle: false,
+    stuff: ["Magic Wind", "Flying Car", "Owl"]
+    };
+ * Untuk mengakses nilai dari object bisa menggunakan tanda titik (.);
+  ~ console.log(user.age);
+ * Bisa juga menambahkan object didalam object, cth:
+  ~ let hai = {
+        name: {
+            first: "Malik",
+            last: "Ibrahim"
+        }
+    }
+  ~ Jadi untuk mengakses object yang berada didalam object: hai.name.first;
