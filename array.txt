@@ -1,0 +1,54 @@
+Array: Tipe data yang mendeskripsikan kumpulan elemen (nilai atau variabel) dan setiap elemennya memiliki index[0];
+
+Contoh penulisan:
+var mhs = ["Malik", "Ibrahim", [5,4,2]]; // elemen didalam array itu tipe datanya boleh beda;
+console.log(mhs.length); // 2
+console.log(mhs[2][1]); // 4
+index dimulai dari 0 // banyaknya elemen -1 itu adalah index
+
+cara memanggil dengan index: console.log(mhs[3]);
+
+Manfaat: mempermudah pengelolaan nilai atau data;
+
+// Manipulasi Array //
+1. Menambahkan array;
+
+var mhs = [];
+mhs[0] = "Malik";
+mhs[1] = "Ibrahim";
+
+2. Mengubah array;
+var mhs = [1, 2, 3];
+mhs[1] = undefined;
+
+3. Menampilkan array;
+var mhs = ["Maulana", "Malik", "Ibrahim"];
+
+for(var i = 0; i < 3; i++){
+    console.log(mhs[i]);
+}
+
+// Method Array //
+length, join, push, pop, shift, unshift;
+
+contoh:
+var mhs = ["Maulana", "Malik", "Ibrahim"];
+console.log(mhs.join()); // Akan menampilkan elemen yang ada pada array dengan lebih rapi
+=> Maulana,Malik,Ibrahim
+
+var mhs = ["Maulana", "Malik", "Ibrahim"];
+console.log(mhs.join('-'));
+=> Maulana-Malik-Ibrahim;
+
+elemen push & pop
+1. push: menambahkan elemen dari elemen terakhir // Boleh meng inputkan lebih dari 1 tipe data
+console.log(mhs.push("elemen"))
+
+2. unshift & shift
+unshift memasukkan nilai pada bagian awal;
+contoh penulisan:
+mhs.unshift("nilai");
+
+shift menghapus data diawal
+contoh penulisan:
+mhs.shift(); harus satu satu
