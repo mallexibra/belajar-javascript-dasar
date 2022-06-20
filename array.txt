@@ -43,6 +43,7 @@ console.log(mhs.join('-'));
 elemen push & pop
 1. push: menambahkan elemen dari elemen terakhir // Boleh meng inputkan lebih dari 1 tipe data
 console.log(mhs.push("elemen"))
+    pop: memecahkan atau menghilangkan elemen pada array
 
 2. unshift & shift
 unshift memasukkan nilai pada bagian awal;
@@ -52,3 +53,103 @@ mhs.unshift("nilai");
 shift menghapus data diawal
 contoh penulisan:
 mhs.shift(); harus satu satu
+
+3. splice & slice
+* splice: menyambungkan
+* splice(indexAwal, mauDihapusBerapa, elemenBaru1, elemenBaru2, ...);
+var arr = ['Malik', "Ibrahim"];
+arr.splice(2, 0, 'Ganteng'); // ['Malik', 'Ibrahim', 'Ganteng'];
+
+* slice: mengiris array
+* slice(awal,akhir);
+    ~ awal: indexAwal yang akan diambil
+    ~ akhir: indexAkhir yang akan diambil + 1;
+var arr = ['Malik', "Ibrahim", "Hai", "Bro!"];
+var arr1 = arr.slice(0,2); // ['Malik', "Ibrahim"];
+
+4. Foreach & Map
+* ForEach: Perulangan pada array;
+* arrName.forEach(function(e){
+    console.log(e);
+})
+* arrName.forEach(function(e, i){
+    console.log(e);
+    ~ e : artinya elemen pada variabel yang disebutkan;
+    ~ i : untuk index;
+* Contoh: var arr = ['Maulana', 'Malik', 'Ibrahim'];
+    arr.forEach(function(e){
+        console.log(e);
+    }); // akan menampilkan seluruh elemen yang berada didalam array;
+arr.forEach(function(e, i){
+    console.log("Mahasiswa ke " + i + "Adalah " + e);
+})
+Mahasiswa ke 0Adalah Malik
+Mahasiswa ke 1Adalah Ibrahim
+Mahasiswa ke 2Adalah hai bro
+Mahasiswa ke 3Adalah Ganteng
+undefined
+arr.forEach(function(e, i){
+    console.log("Mahasiswa ke " + i + " Adalah " + e);
+})
+Mahasiswa ke 0 Adalah Malik
+Mahasiswa ke 1 Adalah Ibrahim
+Mahasiswa ke 2 Adalah hai bro
+Mahasiswa ke 3 Adalah Ganteng
+
+* Map: sama seperti forEach, namun dia mengembalikan nilai array;
+* contoh:
+var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+var arr1 = arr.map(function(e){
+    return e;
+})
+
+console.log(arr1); // mengembalikan nilai array lagi;
+
+var arr = [1,2,3,4,5,6,7,8];
+
+var arr1 = arr.map(function(e){
+    return e;
+});
+
+arr1
+(8) [1, 2, 3, 4, 5, 6, 7, 8]
+var arr1 = arr.map(function(e){
+    return e * 2;
+});
+
+arr1
+(8) [2, 4, 6, 8, 10, 12, 14, 16];
+
+* Sort: mengurutkan array;
+* contoh penulisan:
+var arr = [1,2,4,6,3,5,7,8];
+arr.sort();
+console.log(arr); // [1, 2, 3, 4, 5, 6, 7, 8]
+
+var arr = [1,2,4,6,3,5,7,8, 10, 20];
+arr.sort();
+console.log(arr); // [1, 10, 2, 20, 3, 4, 5, 6, 7, 8]
+~ akan diurutkan beradasarkan karakter awal;
+~ Solusi:
+var arr = [1,2,4,6,3,5,7,8, 10, 20];
+arr.sort(function(a,b){
+    return a-b
+});
+console.log(arr); // [1, 2, 3, 4, 5, 6, 7, 8, 10, 20]
+
+5. filter & find
+* filter: untuk mencari banyak nilai;
+* contoh:
+var arr = [1,2,4,6,3,5,7,8, 10, 20];
+var arr1 = arr.filter(function(x){
+    return x > 5;
+});
+console.log(arr1); // [6, 7, 8, 10, 20];
+
+* find: hanya bisa menghasilkan 1 nilai dan bukan array;
+* contoh:
+var arr = [1,2,4,6,3,5,7,8, 10, 20];
+var arr1 = arr.map(function(x){
+    return x > 5;
+});
+console.log(arr1); // 6;
